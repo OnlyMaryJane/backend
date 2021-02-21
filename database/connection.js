@@ -1,0 +1,7 @@
+// connect db using knex
+const knex = require("knex");
+
+const knexfile = require("../knexfile.js");
+const environment = process.env.DV_ENV || "development";
+
+module.exports = knex(knexfile[environment]);
